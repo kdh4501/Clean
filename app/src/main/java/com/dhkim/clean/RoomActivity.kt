@@ -34,7 +34,7 @@ class RoomActivity : BaseActivity<ActivityRoomBinding>() {
 
     override fun initListener() {
         with(binding) {
-            etPuttext.doOnTextChanged { text, start, before, count ->
+            etPuttext.doOnTextChanged { text, _, _, _ ->
                 CoroutineScope(Dispatchers.IO).launch {
                     viewModel?.getSearchTexts(text.toString())?.collect {
                         CoroutineScope(Dispatchers.Main).launch {
