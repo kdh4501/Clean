@@ -1,7 +1,7 @@
 package com.dhkim.clean.viewmodel
 
-import androidx.lifecycle.ViewModel
+import com.dhkim.clean.base.BaseViewModel
 
-class MainViewModel : ViewModel(){
+class MainViewModel : BaseViewModel(){
 
 }

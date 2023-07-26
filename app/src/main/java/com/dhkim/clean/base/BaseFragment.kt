@@ -14,8 +14,8 @@ abstract class BaseFragment<T : ViewDataBinding, R : ViewModel> : Fragment() {
     lateinit var binding: T
     abstract val viewModel: R
     abstract val layoutResID: Int
-    val baseActivity: BaseActivity<*, *>
-        get() = activity as BaseActivity<*, *>
+    val baseActivity: BaseActivity<*>
+        get() = activity as BaseActivity<*>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

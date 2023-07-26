@@ -34,6 +34,7 @@ abstract class BaseActivity<T: ViewDataBinding> : AppCompatActivity() {
             }
         }
         if (!processed) {
+            @Suppress("DEPRECATION")
             super.onBackPressed()
         }
     }
