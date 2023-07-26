@@ -2,10 +2,11 @@ package com.dhkim.data.datasource
 
 import com.dhkim.data.dao.TextDao
 import com.dhkim.data.model.TextEntity
+import io.reactivex.Single
 import kotlinx.coroutines.flow.Flow
 
 class TextLocalDataSourceImpl(private val textDao: TextDao): TextLocalDataSource {
-    override fun insertText(text: TextEntity): Long {
+    override fun insertText(text: TextEntity): Single<Long> {
         return textDao.insertTexts(text)
     }
 

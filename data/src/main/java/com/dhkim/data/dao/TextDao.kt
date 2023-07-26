@@ -7,11 +7,12 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import kotlinx.coroutines.flow.Flow
 import com.dhkim.data.model.TextEntity
+import io.reactivex.Single
 
 @Dao
 interface TextDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertTexts(texts: TextEntity): Long
+    fun insertTexts(texts: TextEntity): Single<Long>
 
     @Query("SELECT * FROM text ORDER BY id DESC")
     fun getAllTexts(): Flow<List<TextEntity>>
