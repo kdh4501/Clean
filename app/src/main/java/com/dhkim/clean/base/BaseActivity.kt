@@ -7,9 +7,8 @@ import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
 import com.dhkim.clean.R
 
-abstract class BaseActivity<T: ViewDataBinding, R : ViewModel> : AppCompatActivity() {
+abstract class BaseActivity<T: ViewDataBinding> : AppCompatActivity() {
     lateinit var binding: T
-    abstract val viewModel: R
     abstract val layoutResID: Int
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
