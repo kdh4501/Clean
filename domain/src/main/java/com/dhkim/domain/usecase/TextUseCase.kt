@@ -7,5 +7,6 @@ import kotlinx.coroutines.flow.Flow
 class TextUseCase(private val textRepo: TextRepository) {
     fun getAllLocalTexts(): Flow<List<TextItem>> = textRepo.getAllLocalTexts()
     fun getSearchTexts(query: String): Flow<List<TextItem>> = textRepo.getLocalSearchTexts(query)
-    fun intertText(textItem: TextItem): Long = textRepo.insertText(textItem)
+    fun insertText(textItem: TextItem): Long = textRepo.insertText(textItem)
+    fun deleteText(textItem: TextItem) = textRepo.deleteText(textItem)
 }
